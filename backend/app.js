@@ -1,14 +1,16 @@
 const cors = require("cors");
 const express = require("express");
 const app = express();
-
-
-
 app.use(cors());
 app.use(express.json());
+const postController = require('./controllers/postController.js')
 
-const postController = require('./controllers/postController')
+
+
 app.use('/posts', postController);
+
+
+
 app.get("/", (req, res) => {
     res.send("Welcome to Daryna's blog");
   });

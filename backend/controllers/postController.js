@@ -4,6 +4,7 @@ const{getAllPosts} = require('../queries/post')
 
 posts.get("/",async (req, res) => {
     const allPosts = await getAllPosts()
+    console.log(allPosts)
     if (allPosts[0]){
         res.status(200).json(allPosts)
     }else{
