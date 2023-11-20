@@ -8,7 +8,7 @@ CREATE TABLE posts (
     title VARCHAR(100) NOT NULL,
     description VARCHAR(1000) NOT NULL,
     img VARCHAR(500) NOT NULL,
-    DATETIME TIME,
+    date_time TIMESTAMPTZ,
     user_id INT,
     registration_confirmed BOOLEAN
 );
