@@ -48,8 +48,10 @@ const getPost = async (id) => {
                 "UPDATE posts SET title=$1, description =$2, img=$3, date_time=$4, user_id=$5, registration_confirmed=$6 WHERE id=$7 RETURNING *",
                 [post.title, post.description, post.img, post.date_time, post.user_id, post.registration_confirmed, id]
             )
+            console.log(updatedPost)
             return updatedPost
         } catch (error) {
+            console.log(error)
             return error
         }
     }

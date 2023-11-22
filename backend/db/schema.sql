@@ -6,8 +6,8 @@ CREATE DATABASE posts_dev;
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
-    description VARCHAR(1000) NOT NULL,
-    img VARCHAR(500) NOT NULL,
+    description TEXT NOT NULL,
+    img TEXT NOT NULL,
     date_time TIMESTAMPTZ,
     user_id INT,
     registration_confirmed BOOLEAN
